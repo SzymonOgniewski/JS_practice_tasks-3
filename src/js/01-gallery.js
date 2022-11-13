@@ -19,3 +19,7 @@ galleryItems.forEach(element => {
   image.alt = element.description;
   link.append(image);
 });
+let lightbox = new SimpleLightbox('.gallery a', {
+  captionDelay: 250,
+  captionsData: 'alt',
+});
