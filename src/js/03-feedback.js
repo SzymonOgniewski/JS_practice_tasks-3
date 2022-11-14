@@ -38,7 +38,7 @@ const submitEventHandler = event => {
   data.message = message.value;
   console.log(`Email: ${data.email}, Message: ${data.message}`);
   event.currentTarget.reset();
-  localStorage.clear();
+  localStorage.removeItem('feedback-form-state');
 };
 
-form.addEventListener('sumbit', submitEventHandler);
+form.addEventListener('submit', submitEventHandler);
