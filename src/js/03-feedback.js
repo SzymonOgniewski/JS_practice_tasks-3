@@ -29,12 +29,11 @@ if (availableData) {
 
 const submitEventHandler = event => {
   event.preventDefault();
-
   const {
     elements: { email, message },
   } = event.currentTarget;
-  if (email === '' || message === '') {
-    alert('You have to write email and message to proceed');
+  if (email.value === '' || message.value === '') {
+    return alert('You have to write email and message to proceed');
   } else {
     data.email = email.value;
     data.message = message.value;
