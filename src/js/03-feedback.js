@@ -33,12 +33,15 @@ const submitEventHandler = event => {
   const {
     elements: { email, message },
   } = event.currentTarget;
-
-  data.email = email.value;
-  data.message = message.value;
-  console.log(`Email: ${data.email}, Message: ${data.message}`);
-  event.currentTarget.reset();
-  localStorage.removeItem('feedback-form-state');
+  if (email === '' || message === '') {
+    alert('You have to write email and message to proceed');
+  } else {
+    data.email = email.value;
+    data.message = message.value;
+    console.log(`Email: ${data.email}, Message: ${data.message}`);
+    event.currentTarget.reset();
+    localStorage.removeItem('feedback-form-state');
+  }
 };
 
 form.addEventListener('submit', submitEventHandler);

@@ -13,7 +13,7 @@ const getStoragedTime = () => {
   const defaultTime = 0;
   try {
     const storagedTime = localStorage.getItem('videoplayer-current-time');
-    if (!storagedTime) return defaultTime;
+    if (!storagedTime || storagedTime > 568) return defaultTime;
     const parsedTime = JSON.parse(storagedTime);
     return Number(parsedTime);
   } catch (error) {
