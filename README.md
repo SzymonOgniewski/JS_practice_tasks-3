@@ -1,4 +1,4 @@
-# [Image gallery, player, feedback form](https://szymonogniewski.github.io/gallery-video-form/)
+# [Image gallery, player, feedback form](https://szymonogniewski.github.io/JS_practice_tasks-3/)
 
 1. Gallery made with [SimpleLightbox](https://simplelightbox.com/).
 2. Video player made with [Vimeo](https://github.com/vimeo/player.js/#vimeo-player-api).
